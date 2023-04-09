@@ -39,3 +39,13 @@ i    j    lst[j]  lst[j+1]   lst
 2    0      1        2               
 
 '''
+
+def bubble_sort2(lst):
+    swapped = False
+    for i in range(len(lst)-1):
+        for j in range(0, len(lst) - 1):
+            if lst[j] > lst[j+1]:
+                swapped = True
+                lst[j], lst[j+1] = lst[j+1], lst[j]
+        if not swapped:
+            return
